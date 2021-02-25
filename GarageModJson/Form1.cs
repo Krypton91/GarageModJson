@@ -42,8 +42,6 @@ namespace GarageModJson
                     JsonConvert.PopulateObject(DCBankingJson, JsonMeta);
 
                     var GarageNewJson = new DepositaryData();
-
-                    //AdvJsonObject.m_BonusCurrency = JsonMeta.m_MaxOwnedCurrencyBonus;
                     GarageNewJson.m_SteamID = JsonMeta.m_SteamID;
                     GarageNewJson.m_PlayerName = JsonMeta.m_PlayerName;
 

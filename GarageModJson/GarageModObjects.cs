@@ -35,8 +35,9 @@ namespace GarageModJson
 
         public string VehiclesName { get; set; }
 
-        public Vector SpawnPos;
-        public Vector SpawnOri;
+
+        public double[] SpawnPos = new double[] { 0.0, 0.0, 0.0 };
+        public double[] SpawnOri = new double[] { 0.0, 0.0, 0.0 };
 
         public List<VehicleCargo> m_Cargo;
     }
