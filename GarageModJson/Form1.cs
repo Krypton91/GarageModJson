@@ -1,13 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GarageModJson
@@ -37,30 +31,35 @@ namespace GarageModJson
             {
                 for (int i = 0; i < GarageModFiles.Count; i++)
                 {
-                    var DCBankingJson = File.ReadAllText(GarageModFiles[i]);
-                    var JsonMeta = new DepositaryData();
-                    JsonConvert.PopulateObject(DCBankingJson, JsonMeta);
-
-                    var GarageNewJson = new DepositaryData();
-                    GarageNewJson.m_SteamID = JsonMeta.m_SteamID;
-                    GarageNewJson.m_PlayerName = JsonMeta.m_PlayerName;
-
-
-
-                    GarageNewJson.vehicleData = JsonMeta.vehicleData;
-                    if (!Directory.Exists(ServerProfilesFolderDir + @"\Depositary_System\ParsedData\"))
-                        Directory.CreateDirectory(ServerProfilesFolderDir + @"\Depositary_System\ParsedData\");
-                    using (StreamWriter file = File.CreateText(ServerProfilesFolderDir + @"\Depositary_System\ParsedData\" + JsonMeta.m_SteamID + ".json"))
+                    try
                     {
-                        JsonSerializer serializer = new JsonSerializer();
-                        serializer.Formatting = Formatting.Indented;
-                        serializer.Serialize(file, GarageNewJson);
+                        var DCBankingJson = File.ReadAllText(GarageModFiles[i]);
+                        var JsonMeta = new DepositaryData();
+                        JsonConvert.PopulateObject(DCBankingJson, JsonMeta);
+
+                        var GarageNewJson = new DepositaryData();
+                        GarageNewJson.m_SteamID = JsonMeta.m_SteamID;
+                        GarageNewJson.m_PlayerName = JsonMeta.m_PlayerName;
+
+
+
+                        GarageNewJson.vehicleData = JsonMeta.vehicleData;
+                        if (!Directory.Exists(ServerProfilesFolderDir + @"\Depositary_System\ParsedData\"))
+                            Directory.CreateDirectory(ServerProfilesFolderDir + @"\Depositary_System\ParsedData\");
+                        using (StreamWriter file = File.CreateText(ServerProfilesFolderDir + @"\Depositary_System\ParsedData\" + JsonMeta.m_SteamID + ".json"))
+                        {
+                            JsonSerializer serializer = new JsonSerializer();
+                            serializer.Formatting = Formatting.Indented;
+                            serializer.Serialize(file, GarageNewJson);
+                        }
+                    }
+                    catch(Exception ex) 
+                    {
+                        MessageBox.Show("Error: " + ex.Message + "\nPress OK to skipp!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
 
                 MessageBox.Show("DONE!");
-
-
             }
             else
             {
