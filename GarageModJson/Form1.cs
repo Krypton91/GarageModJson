@@ -53,8 +53,8 @@ namespace GarageModJson
                     using (StreamWriter file = File.CreateText(ServerProfilesFolderDir + @"\Depositary_System\ParsedData\" + JsonMeta.m_SteamID + ".json"))
                     {
                         JsonSerializer serializer = new JsonSerializer();
-                        serializer.Serialize(file, GarageNewJson);
                         serializer.Formatting = Formatting.Indented;
+                        serializer.Serialize(file, GarageNewJson);
                     }
                 }
 

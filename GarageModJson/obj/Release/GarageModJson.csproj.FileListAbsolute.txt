@@ -1,0 +1,13 @@
+C:\Users\Krypton\source\repos\GarageModJson\GarageModJson\bin\Release\GarageModJson.exe.config
+C:\Users\Krypton\source\repos\GarageModJson\GarageModJson\bin\Release\GarageModJson.exe
+C:\Users\Krypton\source\repos\GarageModJson\GarageModJson\bin\Release\GarageModJson.pdb
+C:\Users\Krypton\source\repos\GarageModJson\GarageModJson\bin\Release\Newtonsoft.Json.dll
+C:\Users\Krypton\source\repos\GarageModJson\GarageModJson\bin\Release\Newtonsoft.Json.xml
+C:\Users\Krypton\source\repos\GarageModJson\GarageModJson\obj\Release\GarageModJson.csprojAssemblyReference.cache
+C:\Users\Krypton\source\repos\GarageModJson\GarageModJson\obj\Release\GarageModJson.Form1.resources
+C:\Users\Krypton\source\repos\GarageModJson\GarageModJson\obj\Release\GarageModJson.Properties.Resources.resources
+C:\Users\Krypton\source\repos\GarageModJson\GarageModJson\obj\Release\GarageModJson.csproj.GenerateResource.cache
+C:\Users\Krypton\source\repos\GarageModJson\GarageModJson\obj\Release\GarageModJson.csproj.CoreCompileInputs.cache
+C:\Users\Krypton\source\repos\GarageModJson\GarageModJson\obj\Release\GarageModJson.csproj.CopyComplete
+C:\Users\Krypton\source\repos\GarageModJson\GarageModJson\obj\Release\GarageModJson.exe
+C:\Users\Krypton\source\repos\GarageModJson\GarageModJson\obj\Release\GarageModJson.pdb
